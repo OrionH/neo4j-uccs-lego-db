@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<style>
+		body {
+			background-color: rgb(227, 234, 246);
+		}
+
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		h3 {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+			text-align: center;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		div {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		img.resize {
+			max-width: 45%;
+			max-height: 45%;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+
+			var chart = new CanvasJS.Chart("chartContainer", {
+				animationEnabled: true,
+				theme: "light2",
+				title: {
+					text: "Average number of parts per set vs year"
+				},
+				data: [{
+					type: "line",
+					indexLabelFontSize: 16,
+					dataPoints: [
+						{ x: 1949, y: 100 },
+						{ x: 1950, y: 1, indexLabel: "\u2193 lowest", markerColor: "DarkSlateGrey", markerType: "cross" },
+						{ x: 1953, y: 18 },
+						{ x: 1954, y: 12 },
+						{ x: 1955, y: 38 },
+						{ x: 1956, y: 21 },
+						{ x: 1957, y: 50 },
+						{ x: 1958, y: 41 },
+						{ x: 1959, y: 16 },
+						{ x: 1960, y: 263 },
+						{ x: 1961, y: 61 },
+						{ x: 1962, y: 84 },
+						{ x: 1963, y: 63 },
+						{ x: 1964, y: 89 },
+						{ x: 1965, y: 86 },
+						{ x: 1966, y: 48 },
+						{ x: 1967, y: 131 },
+						{ x: 1968, y: 120 },
+						{ x: 1969, y: 76 },
+						{ x: 1970, y: 86 },
+						{ x: 1971, y: 79 },
+						{ x: 1972, y: 101 },
+						{ x: 1973, y: 105 },
+						{ x: 1974, y: 117 },
+						{ x: 1975, y: 128 },
+						{ x: 1976, y: 146 },
+						{ x: 1977, y: 88 },
+						{ x: 1978, y: 139 },
+						{ x: 1979, y: 97 },
+						{ x: 1980, y: 113 },
+						{ x: 1981, y: 95 },
+						{ x: 1982, y: 66 },
+						{ x: 1983, y: 97 },
+						{ x: 1984, y: 82 },
+						{ x: 1985, y: 111 },
+						{ x: 1986, y: 98 },
+						{ x: 1987, y: 66 },
+						{ x: 1988, y: 131 },
+						{ x: 1989, y: 94 },
+						{ x: 1990, y: 166 },
+						{ x: 1991, y: 133 },
+						{ x: 1992, y: 110 },
+						{ x: 1993, y: 127 },
+						{ x: 1994, y: 113 },
+						{ x: 1995, y: 144 },
+						{ x: 1996, y: 159 },
+						{ x: 1997, y: 117 },
+						{ x: 1998, y: 138 },
+						{ x: 1999, y: 105 },
+						{ x: 2000, y: 112 },
+						{ x: 2001, y: 112 },
+						{ x: 2002, y: 121 },
+						{ x: 2003, y: 182 },
+						{ x: 2004, y: 156 },
+						{ x: 2005, y: 221 },
+						{ x: 2006, y: 262 },
+						{ x: 2007, y: 293 },
+						{ x: 2008, y: 281 },
+						{ x: 2009, y: 220 },
+						{ x: 2010, y: 241 },
+						{ x: 2011, y: 186 },
+						{ x: 2012, y: 184 },
+						{ x: 2013, y: 208 },
+						{ x: 2014, y: 224 },
+						{ x: 2015, y: 228 },
+						{ x: 2016, y: 235 },
+						{ x: 2017, y: 271 },
+						{ x: 2018, y: 256 },
+						{ x: 2019, y: 260 },
+						{ x: 2020, y: 300, indexLabel: "\u2191 highest", markerColor: "red", markerType: "triangle" }
+					]
+				}]
+			});
+			chart.render();
+
+		}
+	</script>
+</head>
+
+<body>
+	<style>
+		.img-container {
+			text-align: center;
+		}
+	</style>
+	<h1>Neo4j LEGO Database Group 3</h1>
+	<h3>This data is gathered from the Rebrickable database and follows the schema found below.</h3>
+	<img class = resize src="./Pictures/schema.png"><br><br>
+	<div id="chartContainer" style="height: 300px; width: 80%;"></div>
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<h3>This cypher query gets the data for the average number of parts for all sets in a given year.
+		What this graph shows is an increasing trend since LEGO was founded with a few outlier year.
+		Note that the data is not weighted against the number of sets released in that year. e.g. 1950 had 1 set
+		therefore not being an accurate representation compared to other years.
+		Our database does not provide the information necessary to give a strong corelation to why the amount increases,
+		but it could be due to the average skill of the builder
+		increasing, LEGO increasing the number of unique parts to add detail, bigger sets may sell better, and LEGO can
+		increase the price for larger sets.</h3>
+	<img src="./Pictures/partsSetYear.png">
+
+	<br><br><br><br><br>
+
+	<h1 style="text-align:center">Most common colors of all time</h1>
+	<iframe width="100%" height="1080" frameborder="0"
+		src="https://observablehq.com/embed/@orionh/bar-chart?cell=chart"></iframe><br><br>
+	<h3>This bar graph represents the distribution of brick colors of all time. There are 173 colors total in our
+		database, but because of our choice of graph, we limited it to the top 20.</h3>
+	<img src="./Pictures/commonColorAll.png">
+	<br><br><br><br><br>
+
+	<h1 style="text-align:center">Number of sets per theme released in a year </h1>
+	<p align="center"> <iframe width="75%" height="682" frameborder="0"
+			src="https://observablehq.com/embed/@orionh/bar-chart-neo4j-fork?cell=chart"></iframe> </p><br>
+
+	<h3>This "bar graph race" shows the number of sets in specific themes release per year. This shows a trend of
+		popular themes at a given point in time. The second cypher query show the total sets released per theme of all
+		time. This is based off of the the same data as in the first query. </h3>
+	<img src="./Pictures/themesReleasedPerYear.png" class=center><br>
+	<img src="./Pictures/themesReleasedAll.png" class=center>
+
+</body>
+
+</html>
