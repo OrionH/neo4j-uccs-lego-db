@@ -6,7 +6,7 @@ Orion Humphrey, Brandon Bullock\
 ohumphre@uccs.edu, bbullock@uccs.edu\
 Final Project: README\
 Comments: \
-The point of this project is create database relations and visualize the data.\
+The point of this project is to create database relations and visualize the data.\
 This is a database class, not web design.\
 **WARNING! THIS DATABASE USES A LOT OF RAM!**\
 There are over 1M nodes and 2M relations.\
