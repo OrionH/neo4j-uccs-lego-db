@@ -1,5 +1,5 @@
 # Neo4j Lego History Database
-
+***
 
 Group 3\
 Orion Humphrey, Brandon Bullock\
@@ -12,14 +12,12 @@ The database is 450MB. See the download section
 
 ## Download the dump file
 
-***
 
 Visit this link to download the database .dump file:
   [Database](https://uccsoffice365-my.sharepoint.com/:u:/g/personal/ohumphre_uccs_edu/EQyAnbVhb5NMkF8oOHDHUZ4Brdy7Trz6oTJNaOYN4JbW_Q?e=KjPCpe)
 
 
 ## Loading the database
-***
 
 INSTRUCTIONS ARE FOR WINDOWS, ADJUST ACCORDINGLY FOR OTHER OPERATING SYSTEMS
 1. Create a new database in a Neo4j project.
@@ -32,13 +30,11 @@ INSTRUCTIONS ARE FOR WINDOWS, ADJUST ACCORDINGLY FOR OTHER OPERATING SYSTEMS
 
 
 ## Viewing our data
-***
 
 To view our results, visit: https://neo4j-uccs-lego-db.herokuapp.com/ or click on the index.html file in this folder.\
    More info can be found  [here](https://github.com/OrionH/neo4j-uccs-lego-db).
 
 
 ## Viewing cypher scripts
-***
 
 Open cypher files in the "Saved Cypher Scripts" folder by using a text editor. For more info, see the README in the folder.
